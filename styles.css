@@ -4,6 +4,23 @@
 
 /* RESETS */ 
 
+a:link {
+    color: inherit; /* no blue default link color */ 
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit; /* no purple visited links */ 
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* GLOBAL */ 
 
 body {
@@ -54,6 +71,10 @@ h2 {
     line-height: 100%;
 }
 
+h2:hover {
+    color: hsl(158, 36%, 37%);
+}
+
 h3 {
     font-weight: 500;
     color: hsl(228, 12%, 48%);
@@ -94,6 +115,10 @@ section aside {
     text-align: center;
 }
 
+section aside:hover {
+    background-color: hsl(228, 12%, 48%);
+}
+
 h5 {
     color: hsl(0, 0%, 100%);
     font-size: 1em;
@@ -113,3 +138,10 @@ footer {
     text-align: center;
     font-size: 0.8em;
 }
+
+/* LINK STATES */ 
+
+
+
+
+/* desktop v media queries */ 
