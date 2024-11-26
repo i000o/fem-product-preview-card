@@ -28,7 +28,8 @@ section {
     background-color: hsl(0, 0%, 100%);
     border-radius: 16px;
     margin: 20px 10px;
-    height: 90vh;
+    height: auto;
+    padding-bottom: 5px;
 }
 
 /*  END OF GLOBAL */ 
@@ -39,30 +40,34 @@ h1 {
     color: hsl(228, 12%, 48%);
     letter-spacing: .5rem; /* new */ 
     font-size: 0.8em;
-    margin: 30px 20px 10px 20px;
+    /* margin: 30px 20px 10px 20px; */
+    margin: 30px 20px 10px 30px;
 }
 
 h2 {
     font-family: 'fraunces', serif;
     font-weight: 700;
-    margin: 10px 10px 20px 10px;
-    font-size: 2.5em;
-    padding: 0 10px;
+    /* margin: 10px 10px 20px 10px; */
+    margin: 10px 20px 20px 30px;
+    font-size: 2.3em;
+    /* padding: 0 10px; */
+    line-height: 100%;
 }
 
 h3 {
     font-weight: 500;
     color: hsl(228, 12%, 48%);
-    margin-left: 20px;
+    margin: 0 20px 0 30px ;
     line-height: 150%;
     padding-right: 5px;
+    font-size: 1em;;
 }
 
 p {
     color: hsl(228, 12%, 48%);
     display: inline-block;
     float: right; /* first time using floats */ 
-    margin: 15px 0;
+    margin: 35px 0;
     margin-right: 8em;
 }
 
@@ -71,13 +76,34 @@ h4 {
     font-weight: 700;
     font-size: 2.5em;
     color: hsl(158, 36%, 37%);
-    margin: 0 20px;
+    margin: 20px 0;
+    margin-left: 30px;
     display: inline-block;
     float: left;
 }
 
+section aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 10px;
+    margin: 20px 20px;
+    text-align: center;
+}
+
 h5 {
-    clear: both;
+    color: hsl(0, 0%, 100%);
+    font-size: 1em;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+section aside img {
+    width: 6%;
+    margin-right: 5px;
 }
 
 footer {
