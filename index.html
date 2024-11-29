@@ -12,7 +12,18 @@
 <body>
   <main>
     <section> 
-      <img alt="image of product" src="images/image-product-mobile.jpg" width="480" height="686"> 
+      <!-- My first time with responsive images (art direction) -->
+       <picture>
+          <source
+          srcset="images/image-product-mobile.jpg"
+          media="(max-width: 425px)">
+          
+          <source
+          srcset="images/image-product-desktop.jpg"
+          media="(min-width: 426px)">
+
+          <img src="images/image-product-mobile.jpg" alt="image of perfume">
+        </picture>
     
       <h1>Perfume</h1>
 
