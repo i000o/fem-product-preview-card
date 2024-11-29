@@ -28,6 +28,8 @@ body {
     font-weight: 500, 700;
     display: flex; 
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(30, 38%, 92%);
 }
 
@@ -71,7 +73,7 @@ h2 {
     line-height: 100%;
 }
 
-h2:hover {
+h2:hover { 
     color: hsl(158, 36%, 37%);
 }
 
@@ -81,12 +83,11 @@ h3 {
     margin: 0 20px 0 30px ;
     line-height: 150%;
     padding-right: 5px;
-    font-size: 1em;;
+    font-size: 1em;
 }
 
 p {
     color: hsl(228, 12%, 48%);
-    display: inline-block;
     float: right; /* first time using floats */ 
     margin: 35px 0;
     margin-right: 8em;
@@ -99,11 +100,10 @@ h4 {
     color: hsl(158, 36%, 37%);
     margin: 20px 0;
     margin-left: 30px;
-    display: inline-block;
-    float: left;
+    float: left; /* more correct to use clear: left */ 
 }
 
-section aside {
+section aside.button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -115,8 +115,8 @@ section aside {
     text-align: center;
 }
 
-section aside:hover {
-    background-color: hsl(228, 12%, 48%);
+section aside.button:hover {
+    background-color: hsl(228, 12%, 48%); /* change to reflect design active state */ 
 }
 
 h5 {
@@ -126,7 +126,7 @@ h5 {
     margin-left: 5px;
 }
 
-section aside img {
+section aside.button img {
     width: 6%;
     margin-right: 5px;
 }
@@ -139,9 +139,69 @@ footer {
     font-size: 0.8em;
 }
 
-/* LINK STATES */ 
-
-
+/* focus */ 
 
 
 /* desktop v media queries */ 
+
+@media screen and (min-width: 426px) {
+
+    body {
+        flex-direction: row;
+        height: 100svh;
+    }
+
+    img {
+        width: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 16px;
+        display: inline-block;
+        float: left;
+    }
+
+    section {
+        width: 30rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 1.7em;
+        margin: 20px 40px 20px 30px;
+    }
+
+    h3 {
+        font-size: 0.7em;
+    }
+
+    aside.pricing {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* width: 10rem; */
+    }
+
+    h4 {
+        margin: 30px 5px 30px 30px; 
+        font-size: 1.6em;
+    }
+
+    p {
+        margin: 30px 20px 30px 5px; 
+        font-size: 0.7em;
+    }
+
+    aside.button {
+        margin: 20px 30px;
+    }
+
+    h5 {
+        font-size: 0.9em;
+    }
+}
