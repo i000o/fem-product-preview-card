@@ -23,6 +23,7 @@ a:visited {
 
 /* GLOBAL */ 
 
+/* MOBILE FLEX CONTAINER COLUMN */ 
 body {
     font-family: 'montserrat', sans-serif;
     font-weight: 500, 700;
@@ -33,6 +34,7 @@ body {
     background-color: hsl(30, 38%, 92%);
 }
 
+/* MOBILE FLEX CONTAINER ROW */ 
 img {
     display: flex; 
     flex-direction: row;
@@ -59,22 +61,23 @@ h1 {
     color: hsl(228, 12%, 48%);
     letter-spacing: .5rem; /* new */ 
     font-size: 0.8em;
-    /* margin: 30px 20px 10px 20px; */
     margin: 30px 20px 10px 30px;
 }
 
 h2 {
     font-family: 'fraunces', serif;
     font-weight: 700;
-    /* margin: 10px 10px 20px 10px; */
     margin: 10px 20px 20px 30px;
     font-size: 2.3em;
-    /* padding: 0 10px; */
     line-height: 100%;
 }
 
 h2:hover { 
     color: hsl(158, 36%, 37%);
+}
+
+article a:focus {
+   border-radius: 16px;
 }
 
 h3 {
@@ -86,6 +89,7 @@ h3 {
     font-size: 1em;
 }
 
+/* FLOAT RIGHT */ 
 p {
     color: hsl(228, 12%, 48%);
     float: right; /* first time using floats */ 
@@ -93,6 +97,7 @@ p {
     margin-right: 8em;
 }
 
+/* FLOAT LEFT */ 
 h4 {
     font-family: 'fraunces', serif;
     font-weight: 700;
@@ -103,32 +108,33 @@ h4 {
     float: left; /* more correct to use clear: left */ 
 }
 
-section aside.button {
+/* MOBILE FLEX CONTAINER ROW */ 
+section a.button  {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     width: 90%;
     background-color: hsl(158, 36%, 37%);
     border-radius: 10px;
-    margin: 20px 20px;
+    margin: 25px;
     text-align: center;
 }
 
-section aside.button:hover {
-    background-color: hsl(228, 12%, 48%); /* change to reflect design active state */ 
+section a.button:hover {
+    background-color: hsl(228, 12%, 48%); 
 }
 
 h5 {
     color: hsl(0, 0%, 100%);
     font-size: 1em;
     font-weight: 700;
-    margin-left: 5px;
+    display: inline-block;
+    margin: 20px 5px;
 }
 
-section aside.button img {
-    width: 6%;
-    margin-right: 5px;
+section a.button img {
+    display: inline-block;
+    margin: 20px 5px;
 }
 
 footer {
@@ -139,10 +145,7 @@ footer {
     font-size: 0.8em;
 }
 
-/* focus */ 
-
-
-/* desktop v media queries */ 
+/* DESKTOP */ 
 
 @media screen and (min-width: 426px) {
 
@@ -156,12 +159,11 @@ footer {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 16px;
-        display: inline-block;
         float: left;
     }
 
     section {
-        width: 30rem;
+        width: 35rem;
     }
 
     article {
@@ -169,39 +171,47 @@ footer {
         flex-direction: column;
     }
 
+    h1 {
+        font-size: 0.6em;
+    }
+
     h2 {
-        font-size: 1.7em;
-        margin: 20px 40px 20px 30px;
+        font-size: 1.9em;
+        margin: 10px 40px 20px 30px;
     }
 
     h3 {
-        font-size: 0.7em;
+        font-size: 0.82em;
     }
 
     aside.pricing {
         display: flex; 
         flex-direction: row;
         align-items: center;
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* width: 10rem; */
     }
 
     h4 {
-        margin: 30px 5px 30px 30px; 
-        font-size: 1.6em;
+        margin: 30px 5px 0 30px; 
+        font-size: 1.8em;
     }
 
     p {
-        margin: 30px 20px 30px 5px; 
+        margin: 30px 20px 0 10px; 
         font-size: 0.7em;
     }
 
-    aside.button {
-        margin: 20px 30px;
+    a.button {
+        max-width: 80%;
     }
 
     h5 {
-        font-size: 0.9em;
+        font-size: 0.8em;
+        margin: 15px 5px;
     }
+
+    section a.button img {
+        width: 7%;
+        margin: 15px 5px;
+    }
+
 }
