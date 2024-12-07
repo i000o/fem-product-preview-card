@@ -37,7 +37,7 @@ The outcome is true to the design and functions well responsively. Although, it 
 ## Built with
 
 :gear: Semantic HTML5 markup  
-:gear: CSS Flex  
+:gear: CSS Flex and Floats
 :gear: Mobile-first workflow
 
 ## Feedback
